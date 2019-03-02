@@ -1,0 +1,15 @@
+Design and implement a multi-threaded application that finds the occurrence(s) of a string in a text file of 100GB. 
+It should return the line-number(s) in which the match(es) is/are found. 
+
+Need not worry about the system constraints in spawning and running threads. 
+There is a 32 core CPU with immense power. Huge amount of RAM. 
+
+The result should be returned in few sec.
+
+(Possible) Ans:- 
+Read entire file in Memory.
+It involves 2 actions. Start 32 threads working in parallel on chunks of every roughly 300Mb. 
+Because searching is CPU intensive there is no point creating more than 32 threads since there are 32 cores and all of them will be busy.
+
+How to optimize searching further:
+Create a trie of every chunk where each node stores the word along with the line number that it appears in.
