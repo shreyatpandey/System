@@ -1,4 +1,4 @@
-Design and implement a multi-threaded application that finds the occurrence(s) of a string in a text file of 100GB. 
+Q1]Design and implement a multi-threaded application that finds the occurrence(s) of a string in a text file of 100GB. 
 It should return the line-number(s) in which the match(es) is/are found. 
 
 Need not worry about the system constraints in spawning and running threads. 
@@ -13,3 +13,7 @@ Because searching is CPU intensive there is no point creating more than 32 threa
 
 How to optimize searching further:
 Create a trie of every chunk where each node stores the word along with the line number that it appears in.
+
+Q2]different between exec and fork. will parent process and child process 
+in deadlock if parent is using resource and child will also get same resource ? 
+what if parent contains two threads ? will child also get 2 threads ? how fork will be thread safe ?
